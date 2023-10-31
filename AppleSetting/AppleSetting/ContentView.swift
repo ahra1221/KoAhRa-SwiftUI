@@ -13,7 +13,27 @@ struct ContentView: View {
             NavigationView {
                 List {
                     Section {
-                        Text("ahra")
+                        NavigationLink {
+                            Text("프로필 화면")
+                        } label: {
+                            HStack {
+                                Image(systemName: "person.fill")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 40, height: 40)
+                                    .padding(.all, 10)
+                                    .background(.gray)
+                                    .foregroundColor(.white)
+                                    .clipShape(Circle())
+                                VStack(alignment: .leading, spacing: 3) {
+                                    Text ("아라")
+                                        .font(.system(size: 22))
+                                        .fontWeight(.bold)
+                                    Text ("Apple ID, iCloud, 미디어 및 구입")
+                                        .font(.system(size: 14))
+                                }.padding(.leading, 5)
+                            }.padding(.vertical, 10)
+                        }
                     }
                     Section {
                         HStack {
